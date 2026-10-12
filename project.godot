@@ -1,0 +1,47 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="rogue practice"
+run/main_scene="uid://ddfouepbwdpag"
+config/features=PackedStringArray("4.7", "GL Compatibility")
+config/icon="res://icon.svg"
+
+[display]
+
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/godot_vim/plugin.cfg")
+
+[neovim]
+
+embed/autostart=true
+embed/extra_args=PackedStringArray()
+embed/font_path="res://addons/VimDot/assets/fonts/jetbrains/JetBrainsMonoNerdFontMono-Regular.ttf"
+embed/font_size=14
+embed/hide_script_editor_experimental=false
+embed/debug_logging=false
+embed/theme="default"
+embed/command="nvim"
+
+[physics]
+
+3d/physics_engine="Jolt Physics"
+
+[rendering]
+
+rendering_device/driver.windows="d3d12"
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
+environment/defaults/default_clear_color=Color(0, 0, 0, 1)

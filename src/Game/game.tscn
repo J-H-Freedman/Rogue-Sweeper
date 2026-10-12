@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://ddfouepbwdpag"]
+
+[ext_resource type="Script" uid="uid://baeap6f274qmq" path="res://src/Game/game.gd" id="1_sag4g"]
+[ext_resource type="Script" uid="uid://cswl7tqqqkfg3" path="res://src/Game/event_handler.gd" id="3_bob6j"]
+[ext_resource type="Script" uid="uid://ciqhfu0sqly8i" path="res://src/Map/dungeon_generator.gd" id="4_3s8ir"]
+[ext_resource type="Script" uid="uid://c1qb2t7jnb8g7" path="res://src/Map/map.gd" id="4_bob6j"]
+
+[node name="Game" type="Node2D" unique_id=1739631238]
+script = ExtResource("1_sag4g")
+
+[node name="EventHandler" type="Node" parent="." unique_id=1813138699]
+script = ExtResource("3_bob6j")
+
+[node name="Map" type="Node2D" parent="." unique_id=581835435]
+script = ExtResource("4_bob6j")
+
+[node name="DungeonGenerator" type="Node" parent="Map" unique_id=1286100725]
+script = ExtResource("4_3s8ir")
+
+[node name="Entities" type="Node2D" parent="." unique_id=629602847]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1342193905]
+zoom = Vector2(2, 2)
